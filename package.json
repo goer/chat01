@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "serve",
+    "start": "watchify main.js -o bundle.js & serve .",
     "build": "browserify main.js -o bundle.js"
   },
   "repository": {
@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "serve": "^11.2.0"
+    "serve": "^11.2.0",
+    "browserify": "16.5.1"
   },
   "dependencies": {
-    "browserify": "16.5.1",
     "jquery": "^3.5.0",
     "parse": "2.12.0"
   }
