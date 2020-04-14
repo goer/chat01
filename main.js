@@ -10,7 +10,9 @@ class UserManager extends Log {
     }
 
     async getBy(key,value) {
-        return await ParseUtil.findOne(this.table,{key:value})
+        var p = {} 
+        p[key]=value
+        return await ParseUtil.findOne(this.table,p)
     }
 
     async list(props={},limit=10,sort=''){
@@ -44,7 +46,7 @@ class UserManager extends Log {
 
 }
 
-class VendorManager extends Log {
+class VendorManager extends UserManager {
     constructor() {
         super()
         this.table = 'XVendor'
@@ -130,6 +132,7 @@ class RoomManager extends UserManager {
 
 }
 
+exports.VendorManager = VendorManager 
 
 var init = async () => {
 

@@ -39,7 +39,7 @@ class Util extends Log {
     }
 
     async findOne(table,props){
-        var rs = this.findBy(table,props,1)
+        var rs = await this.findBy(table,props,1)
         if(rs){
             return rs[0]
         }

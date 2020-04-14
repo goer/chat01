@@ -23,7 +23,11 @@
     "browserify": "16.5.1"
   },
   "dependencies": {
+    "@material/mwc-button": "^0.14.1",
+    "@webcomponents/webcomponentsjs": "^2.4.3",
     "jquery": "^3.5.0",
+    "lit-html": "^1.2.1",
+    "lit-ntml": "^2.15.0",
     "parse": "2.12.0"
   }
 }
